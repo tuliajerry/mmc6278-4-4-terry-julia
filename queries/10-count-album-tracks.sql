@@ -8,14 +8,10 @@ SELECT
   artists.name AS artist_name,
   albums.name AS album_name,
   albums.release_year,
-  COUNT(songs.id) AS num_of_tracks
-FROM
-  artists
-INNER JOIN
-  albums ON artists.id = albums.artist_id
-INNER JOIN
-  songs ON songs.album_id = albums.id
-GROUP BY
-  artists.name, albums.name, albums.release_year
-ORDER BY
-  num_of_tracks ASC;
+  count(songs.id) AS num_of_tracks
+  FROM artists
+  INNER JOIN albums ON artists.id=albums.artist_id
+  INNER JOIN songs ON songs.album_id=albums.id
+  GROUP BY albums.id
+  ORDER BY num_of_tracks ASC;
+
