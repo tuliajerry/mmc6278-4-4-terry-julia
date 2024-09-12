@@ -12,7 +12,7 @@ CREATE TABLE albums (
   name VARCHAR(100) NOT NULL,
   artist_id INT,
   release_year INT,
-  FOREIGN KEY (artist_id) REFERENCES artists (id) ON DELETE CASCADE
+  FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE
 );
 
 CREATE TABLE songs (
@@ -21,6 +21,6 @@ CREATE TABLE songs (
   track_number INT,
   artist_id INT,
   album_id INT,
-  FOREIGN KEY (artist_id) REFERENCES artists (id) ON DELETE CASCADE,
-  FOREIGN KEY (album_id) REFERENCES albums (id) ON DELETE CASCADE
+  FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE,
+  FOREIGN KEY (album_id) REFERENCES albums(id) ON DELETE CASCADE
 );
