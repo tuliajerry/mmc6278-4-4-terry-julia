@@ -2,4 +2,4 @@
 -- Change the name of The Black Album to "Metallica"
 UPDATE albums
 SET name = 'Metallica'
-WHERE name = 'The Black Album' AND artist_id = 7;
+WHERE name = 'The Black Album' AND artist_id = 1;
