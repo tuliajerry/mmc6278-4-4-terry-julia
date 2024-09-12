@@ -1,2 +1,2 @@
--- Selects all artists from the artists table
+-- Select all artists from the artists table
 SELECT * FROM artists;
