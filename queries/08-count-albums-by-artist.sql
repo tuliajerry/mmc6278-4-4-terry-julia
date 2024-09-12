@@ -6,6 +6,9 @@
 SELECT
   artists.name,
   COUNT(albums.id) AS number_of_albums
-  FROM albums
-  INNER JOIN artists ON artists.id=albums.artist_id
-  GROUP BY artists.id;
+FROM
+  albums
+INNER JOIN
+  artists ON artists.id = albums.artist_id
+GROUP BY
+  artists.id, artists.name;
